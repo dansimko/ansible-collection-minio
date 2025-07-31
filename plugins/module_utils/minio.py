@@ -35,7 +35,7 @@ def minio_argument_spec(**kwargs):
                 access_key=dict(type="str", required=True, no_log=True),
                 secret_key=dict(type="str", required=True, no_log=True),
                 url=dict(type="str", required=True),
-                validate_cert=dict(type="bool", default=True),
+                validate_certs=dict(type="bool", default=True),
             ),
         )
     )

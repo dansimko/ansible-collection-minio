@@ -75,7 +75,9 @@ seealso:
     link: https://min.io/docs/minio/linux/reference/minio-mc-admin/mc-admin-policy-create.html
 notes:
   - The O(auth.access_key) provided must have the B(admin:CreatePolicy) permission.
-extends_documentation_fragment: dubzland.minio.minio_auth
+extends_documentation_fragment:
+  - dubzland.minio.minio_auth
+  - dubzland.minio.minio_group
 """
 
 EXAMPLES = """

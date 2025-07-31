@@ -69,7 +69,9 @@ seealso:
   - name: mc mb
     description: Documentation for the B(mc admin user svcacct) command.
     link: https://min.io/docs/minio/linux/reference/minio-mc-admin/mc-admin-user-svcacct.html
-extends_documentation_fragment: dubzland.minio.minio_auth
+extends_documentation_fragment:
+  - dubzland.minio.minio_auth
+  - dubzland.minio.minio_group
 """
 
 EXAMPLES = """

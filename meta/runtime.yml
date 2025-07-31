@@ -1,2 +1,9 @@
 ---
 requires_ansible: '>=2.14.0'
+action_groups:
+  minio:
+    - minio_alias
+    - minio_policy
+    - minio_user
+    - minio_bucket
+    - minio_service_account
