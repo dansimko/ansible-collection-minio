@@ -29,4 +29,8 @@ options:
           type: str
           required: true
           description: Minio Server URL.
+      validate_certs:
+        type: bool
+        description: Validate API TLS certificates.
+        default: true
 """

@@ -35,6 +35,7 @@ def minio_argument_spec(**kwargs):
                 access_key=dict(type="str", required=True, no_log=True),
                 secret_key=dict(type="str", required=True, no_log=True),
                 url=dict(type="str", required=True),
+                validate_cert=dict(type="bool", default=True),
             ),
         )
     )
@@ -63,6 +64,7 @@ def minio_client(module):
         access_key=auth["access_key"],
         secret_key=auth["secret_key"],
         secure=o.scheme == "https",
+        cert_check=auth['validate_certs'],
     )
 
     return client
@@ -81,6 +83,7 @@ def minio_admin_client(module):
         ),
         "",
         o.scheme == "https",
+        cert_check=auth['validate_certs'],
     )
 
     return client
